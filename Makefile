@@ -9,7 +9,9 @@ MAIN = src/main.c
 
 SRC =
 
-TESTS = tests/test_my_strlen.c
+SRC_TST = src/my_test.c
+
+TESTS = tests/test_my_test.c
 
 OBJ = $(MAIN:.c=.o) $(SRC:.c=.o)
 
@@ -40,7 +42,7 @@ re:
 	make
 
 tests_run:
-	gcc $(SRC) $(TESTS_SRC) $(SRC_LIB) $(CFLAGS) -lcriterion -o./u --coverage
+	gcc $(SRC_TST) $(TESTS) $(CFLAGS) -lcriterion -o./u --coverage
 	./u
 
 debug:
