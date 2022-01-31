@@ -17,7 +17,6 @@
     #define PRINTF_FLAGS_INT "diu"
     #define PRINTF_FLAGS_NO_END " .#-+0123456789%"
 
-
 typedef struct type_flags {
     char flag;
     void (* function)(char *str, va_list param, int i);
@@ -145,5 +144,7 @@ int my_exit(char *reason, int nb);
 char *my_strdup(char const *src);
 
 int my_str_isnumber(char const *str);
+
+void my_strcat_3(char **dest, char const *src);
 
 #endif

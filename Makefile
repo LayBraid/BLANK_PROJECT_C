@@ -44,14 +44,3 @@ re:
 tests_run:
 	gcc $(SRC_TST) $(TESTS) $(CFLAGS) -lcriterion -o./u --coverage
 	./u
-
-debug:
-	gcc $(SRC) $(SRC_LIB) -o./$(NAME) -g
-
-valgrind:
-	gcc $(SRC) $(SRC_LIB) -o./$(NAME) -g3
-	valgrind ./$(NAME)
-
-gdb:
-	gcc $(SRC) $(SRC_LIB) -o./$(NAME) -g
-	gdb ./$(NAME)

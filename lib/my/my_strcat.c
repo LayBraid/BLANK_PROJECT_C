@@ -20,3 +20,9 @@ char *my_strcat(char *dest, char const *src)
     tmp[lenght + i] = '\0';
     return (tmp);
 }
+
+void my_strcat_3(char **dest, char const *src)
+{
+    for (int i = 0; i < my_strlen(src); i++)
+        *dest = my_strcat_c(*dest, src[i]);
+}
